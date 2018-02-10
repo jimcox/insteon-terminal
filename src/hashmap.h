@@ -3,7 +3,9 @@
 
 typedef void* hashmap_value_ptr;
 typedef void* hashmap_key_ptr;
-typedef int (*hashmap_hash_func)(hashmap_key_ptr);
+
+typedef unsigned long (*hashmap_hash_func)(hashmap_key_ptr);
+
 typedef int (*hashmap_keycmp_func)(hashmap_key_ptr, hashmap_key_ptr);
 
 typedef struct {
@@ -22,11 +24,17 @@ typedef struct {
 } hashmap;
 
 /*
- * 
+ * Will setup the hashmap table/function pointers
  */
 int hashmap_init(hashmap *map,
         hashmap_hash_func hash_func,
         hashmap_keycmp_func keycmp_func);
+
+// Special types of maps
+// Map from string to value
+int hashmap_init_strmap(hashmap *map);
+// Map from int to value
+int hashmap_init_intmap(hashmap *map);
 
 /*
  * Free the hashmap's associated data
