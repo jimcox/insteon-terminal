@@ -45,4 +45,5 @@ public class Terminal implements Console {
 		System.out.print(prompt);
 		return m_scanner.nextLine();
 	}
+
 }

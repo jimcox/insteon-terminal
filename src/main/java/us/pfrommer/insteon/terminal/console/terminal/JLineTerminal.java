@@ -6,6 +6,7 @@ import java.io.Reader;
 
 import jline.ConsoleReader;
 import jline.Terminal;
+
 import us.pfrommer.insteon.terminal.console.Console;
 import us.pfrommer.insteon.terminal.console.ConsoleListener;
 

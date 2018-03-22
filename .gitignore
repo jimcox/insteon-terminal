@@ -9,3 +9,6 @@ nrjavaserial.jar
 init.py
 backup.db
 insteon-terminal.log
+/.gradle/
+/gradle/
+/gradlew
