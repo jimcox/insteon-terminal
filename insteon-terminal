@@ -1,13 +1,6 @@
 #!/bin/bash
 
-jar_file=build/jars/insteon-terminal.jar
-path="${jar_file}"
 
-if [ ! -f $jar_file ];
-then
-   ant jar
-fi
-
-java -cp "${path}" us.pfrommer.insteon.terminal.Main "$@"
+gradle run --args "$@"
 
 exit 0
